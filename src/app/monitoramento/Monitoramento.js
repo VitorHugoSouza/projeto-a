@@ -1,17 +1,17 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { db } from 'services/firebase';
+/* import { db } from 'services/firebase'; */
 import { ref, onValue} from "firebase/database";
 
 
-import './Monitoramento.css';
+/* import './Monitoramento.css'; */
 
 export default function Monitoramento() {
 
 	const [dadosPlaca1, setDadosPlaca1] = useState([]);
 	const [dadosPlaca2, setDadosPlaca2] = useState([]);
 
-	function getPlaca1() {
+	/* function getPlaca1() {
 		const distanciaRef = ref(db, 'placa-1');
 		
 		return onValue(distanciaRef, (placa) => {
@@ -38,7 +38,7 @@ export default function Monitoramento() {
 		getPlaca1();
 		getPlaca2();
 
-  }, []);
+  }, []); */
 
 	return (
 		<div>
