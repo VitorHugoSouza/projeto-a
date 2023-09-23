@@ -80,7 +80,7 @@ export default function Monitoramento() {
 		} else if (dadosPlaca.umidade > 70) {
 			setDescricaoUmidade('Umidade acima do ideal, favor verificar a sala!')
 		} else {
-			setDescricaoUmidade('Umidade ideal, favor verificar a sala!')
+			setDescricaoUmidade('Umidade ideal.')
 		}
 	}, [dadosPlaca.umidade]);
 
