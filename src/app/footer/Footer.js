@@ -5,10 +5,7 @@ export default function Footer() {
   <>
     <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
       <Typography variant="body2" color="text.secondary" align="center">
-        {'Gustavo Mazzuco e Vitor Hugo - '}
-        <Link color="inherit">
-          UNISATC
-        </Link>{' '}
+        {'Gustavo Mazzuco e Vitor Hugo de Souza - UNISATC '}
         {new Date().getFullYear()}
         {'.'}
       </Typography>

@@ -1,8 +1,4 @@
 'use client'
-import styles from './page.module.css'
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -16,33 +12,14 @@ const defaultTheme = createTheme();
 
 export default function Home() {
   return (
-    <>
-      <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <Header />
-      <main>
-        {/* Hero unit */}
-        <Box
-          sx={{
-            bgcolor: 'background.paper',
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="sm">
-            
-          </Container>
-        </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            <Monitoramento />
-          </Grid>
+        <Container sx={{ py: 8 }} maxWidth="lg">
+          <Monitoramento />
         </Container>
-      </main>
       {/* Footer */}
-        <Footer />
+      <Footer />
       {/* End footer */}
     </ThemeProvider>
-    </>
   )
 }
