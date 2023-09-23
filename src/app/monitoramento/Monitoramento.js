@@ -88,9 +88,9 @@ export default function Monitoramento() {
 		<div>
 
 			<h3>Monitoramento da placa principal </h3>
-			<Grid container spacing={2}>
+			<Grid container spacing={3}>
 
-				<Grid item xs={4}>
+				<Grid item xs={12} md={4} lg={4}>
 					<Card sx={{ maxWidth: 345 }}>
 						{corLed !== '' ?
 							<div className='imageLed'>
@@ -108,7 +108,7 @@ export default function Monitoramento() {
 					</Card>
 				</Grid>
 
-				<Grid item xs={4}>
+				<Grid item xs={12} md={4} lg={4}>
 					<Card sx={{ maxWidth: 345 }}>
 						<CardContent>
 							<Typography gutterBottom variant="h5" component="div">
@@ -121,7 +121,7 @@ export default function Monitoramento() {
 					</Card>
 				</Grid>
 
-				<Grid item xs={4}>
+				<Grid item xs={12} md={4} lg={4}>
 					<Card sx={{ maxWidth: 345 }}>
 						<CardContent>
 							<Typography gutterBottom variant="h5" component="div">

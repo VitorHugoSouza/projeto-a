@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Header />
-        <Container sx={{ py: 8 }} maxWidth="lg">
+        <Container sx={{ mt: 4, mb: 4 }} maxWidth="lg">
           <Monitoramento />
         </Container>
       {/* Footer */}
