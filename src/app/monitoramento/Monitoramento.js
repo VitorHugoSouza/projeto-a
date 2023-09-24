@@ -27,7 +27,6 @@ export default function Monitoramento() {
 
 		return onValue(distanciaRef, (placa) => {
 			if (placa.exists()) {
-				console.log('placa atualizada ==>', placa.val());
 				setDadosPlaca(placa.val());
 			}
 		});
