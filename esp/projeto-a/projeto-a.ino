@@ -43,8 +43,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 
 /* DEFINIÇÕES DE VARIÁVEIS GLOBAIS*/
-const char* ssid = "SSID";
-const char* password = "PASSWORD";
+const char* ssid = "Mariani";
+const char* password = "@mranakoski";
 //Comandos aceitos
 const String STATS_LED = "status led";
 const String TEMPERATURA = "temperatura";
@@ -56,7 +56,8 @@ bool signupOK = false;
 int cor_led = 0;
 //Tempo em que foi feita a última checagem
 uint32_t lastCheckTime = 0;
-uint32_t lastTime = 0;
+uint32_t lastTimeTemperatura = 0;
+uint32_t lastTimeUmidade = 0;
 //Ids dos usuários que podem interagir com o bot.
 String validSenderIds[SENDER_ID_COUNT] = {"1980038306", "5385567687"};
 
@@ -133,7 +134,7 @@ void loop() {
     handleNewMessages(numNewMessages);
   }
 
-  if ((dht.readTemperature() >= 22 && dht.readTemperature() <= 26) && (dht.readHumidity() >= 50 && dht.readHumidity() <= 85)) {
+  if ((dht.readTemperature() >= 22 && dht.readTemperature() <= 26) && (dht.readHumidity() >= 50 && dht.readHumidity() <= 70)) {
     ligaLedVerde();
     enviaFirebase(1);
   }
@@ -141,17 +142,19 @@ void loop() {
   if (dht.readTemperature() < 22 || dht.readTemperature() > 26) {
     ligaLedVermelho();
     enviaFirebase(0);
-    if (millis() - lastTime > 180000) {
+    if (now - lastTimeTemperatura > 180000) {
+      lastTimeTemperatura = now;
       for (int i=0; i < SENDER_ID_COUNT; i++) {
         alertaTemperatura(validSenderIds[i]);
       }
     }
   }
 
-  if (dht.readHumidity() < 50 || dht.readHumidity() > 87) {
+  if (dht.readHumidity() < 50 || dht.readHumidity() > 70) {
     ligaLedVermelho();
     enviaFirebase(0);
-    if (millis() - lastTime > 180000) {
+    if (now - lastTimeUmidade > 180000) {
+      lastTimeUmidade = now;
       for (int i=0; i < SENDER_ID_COUNT; i++) {
         alertaUmidade(validSenderIds[i]);
       }

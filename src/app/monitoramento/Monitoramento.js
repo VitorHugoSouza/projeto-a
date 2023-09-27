@@ -50,7 +50,7 @@ export default function Monitoramento() {
 		if (dadosPlaca.led === 0) {
 			setCorLed(led_red)
 			setNomeCor('vermelha')
-			setDescricaoCor('Atenção! A sala está com uma temperatura mais alta que a ideal, favor verificar!!')
+			setDescricaoCor('Atenção! A temperatura ou umidade esta fora do ideal, favor verificar a sala!!')
 		} else if (dadosPlaca.led === 1) {
 			setCorLed(led_green)
 			setNomeCor('verde')
