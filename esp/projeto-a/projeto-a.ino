@@ -13,18 +13,16 @@
 #define INTERVAL 1000
 //Token do bot
 // Vitor
-#define BOT_TOKEN "6404416342:AAFJWGHQT3qH1YzAGvHvDrk1kQhHQGJIZ3E"
-// Gustavo
-//#define BOT_TOKEN "6335696437:AAEl7TtYYzItSwNtzE4Xc7xREfcYQsQCxMY"
+#define BOT_TOKEN "TOKEN_BOT_TELEGRAM"
 #define DHTPIN 2 //Pino digital D2 (GPIO5) conectado ao DHT11
 #define DHTTYPE DHT11 //Tipo do sensor DHT11
 #define BLUE 16
 #define GREEN 5
 #define RED 4
 // Insert Firebase project API Key
-#define API_KEY "AIzaSyDziPSAgb1QUvBek2SbZohJ0cZx89sY9kY"
+#define API_KEY "KEY_FIREBASE"
 // Insert RTDB URLefine the RTDB URL
-#define DATABASE_URL "https://projeto-a-d1cbc-default-rtdb.firebaseio.com/"
+#define DATABASE_URL "URL_FIREBASE"
 //Quantidade de usuários que podem interagir com o bot
 #define SENDER_ID_COUNT 2
 
@@ -43,8 +41,8 @@ DHT dht(DHTPIN, DHTTYPE);
 
 
 /* DEFINIÇÕES DE VARIÁVEIS GLOBAIS*/
-const char* ssid = "Mariani";
-const char* password = "@mranakoski";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 //Comandos aceitos
 const String STATS_LED = "status led";
 const String TEMPERATURA = "temperatura";
@@ -59,7 +57,7 @@ uint32_t lastCheckTime = 0;
 uint32_t lastTimeTemperatura = 0;
 uint32_t lastTimeUmidade = 0;
 //Ids dos usuários que podem interagir com o bot.
-String validSenderIds[SENDER_ID_COUNT] = {"1980038306", "5385567687"};
+String validSenderIds[SENDER_ID_COUNT] = {"ID_USER_TELEGRAM", "ID_USER_TELEGRAM"};
 
 
 
