@@ -15,7 +15,7 @@ import './Monitoramento.css';
 
 export default function Monitoramento() {
 
-	const [dadosPlaca, setDadosPlaca] = useState({led: '1', temperatura: '23.5', umidade: '62'});
+	const [dadosPlaca, setDadosPlaca] = useState({led: 1, temperatura: '23.5', umidade: '62'});
 	const [corLed, setCorLed] = useState('');
 	const [nomeCor, setNomeCor] = useState('');
 	const [descricaoCor, setDescricaoCor] = useState('');
