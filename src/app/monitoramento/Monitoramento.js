@@ -15,14 +15,14 @@ import './Monitoramento.css';
 
 export default function Monitoramento() {
 
-	const [dadosPlaca, setDadosPlaca] = useState([]);
+	const [dadosPlaca, setDadosPlaca] = useState({led: '1', temperatura: '23.5', umidade: '62'});
 	const [corLed, setCorLed] = useState('');
 	const [nomeCor, setNomeCor] = useState('');
 	const [descricaoCor, setDescricaoCor] = useState('');
 	const [descricaoTemperatura, setDescricaoTemperatura] = useState('');
 	const [descricaoUmidade, setDescricaoUmidade] = useState('');
 
-	function getPlaca() {
+	/* function getPlaca() {
 		const distanciaRef = ref(db, '/esp');
 
 		return onValue(distanciaRef, (placa) => {
@@ -36,7 +36,7 @@ export default function Monitoramento() {
 
 		getPlaca();
 
-	}, []);
+	}, []); */
 
 	useEffect(() => {
 
